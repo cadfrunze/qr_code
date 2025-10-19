@@ -29,7 +29,7 @@ def gen_qrcode(info_qr: str, png_name: str)->None:
 
 if __name__ == "__main__":
     while True:
-        print("Pt exit keep CTRL+Z")
+        print("Pt exit keep CTRL+Z\n\n")
         qr_info: str = input("Info QR: ").strip()
         nume_qr: str = input("Nume fisier (.png): ").strip()
         gen_qrcode(info_qr=qr_info, png_name=nume_qr)
