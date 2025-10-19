@@ -8,7 +8,7 @@ from io import BytesIO
 
 
 
-def gen_qrcode(info_qr: str, png_name: str)->None:
+def gen_qrcode(continut: str, png_name: str)->None:
 
 
     qr = QRCode(
@@ -17,7 +17,7 @@ def gen_qrcode(info_qr: str, png_name: str)->None:
         box_size=10,
         border=4,
     )
-    qr.add_data(info_qr)
+    qr.add_data(continut)
     qr.make(fit=True)
 
     img = qr.make_image(fill_color="black", back_color="white")
@@ -29,7 +29,7 @@ def gen_qrcode(info_qr: str, png_name: str)->None:
 
 if __name__ == "__main__":
     while True:
-        print("Pt exit keep CTRL+Z\n\n")
+        print("For exit keep CTRL+Z\n")
         qr_info: str = input("Info QR: ").strip()
         nume_qr: str = input("Nume fisier (.png): ").strip()
-        gen_qrcode(info_qr=qr_info, png_name=nume_qr)
+        gen_qrcode(continut=qr_info, png_name=nume_qr)
